@@ -7,4 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CoSoRepository extends JpaRepository<CoSo,Integer> {
     CoSo findCoSoById(Integer id);
+    CoSo findCoSoByMa(String ma);
+
 }

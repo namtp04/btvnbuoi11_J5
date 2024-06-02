@@ -33,8 +33,20 @@
         </tr>
     </c:forEach>
 </table>
+<c:if test="${currentPage==0}">
+    <button disabled>Previous</button>
+</c:if>
+<c:if test="${currentPage>0}">
+    <button><a href="?page=${currentPage-1}">Previous</a></button>
+</c:if>
 <c:forEach begin="1" end="${totalPage}" var="n">
     <button><a href="?page=${n-1}">${n}</a></button>
 </c:forEach>
+<c:if test="${currentPage==totalPage-1}">
+    <button disabled>Next</button>
+</c:if>
+<c:if test="${currentPage<totalPage-1}">
+    <button><a href="?page=${currentPage+1}">Next</a></button>
+</c:if>
 </body>
 </html>

@@ -10,6 +10,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -34,6 +35,7 @@ public class CoSo {
     private TaiKhoanNganHang taiKhoanNganHang;
 
     @Column(name = "ma")
+    @NotBlank(message = "Ma khong duoc trong")
     private String ma;
 
     @Column(name = "ten_co_so")
@@ -46,12 +48,14 @@ public class CoSo {
     private String maSoThue;
 
     @Column(name = "so_dien_thoai")
+    @NotBlank(message = "SDT khong duoc trong")
     private String soDienThoai;
 
     @Column(name = "email")
     private String email;
 
     @Column(name = "ghi_chu")
+    @NotBlank(message = "Ghi chu khong duoc trong")
     private String ghiChu;
 
     @Column(name = "ten_tinh")

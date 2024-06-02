@@ -12,7 +12,7 @@
     <p>Ma tai khoan ngan hang:
         <select name="taiKhoanNganHang">
             <c:forEach items="${lstTK}" var="n">
-                <option value="${n.id}">${n.ma}</option>
+                <option value="${n.id}" ${n.id==cs1.taiKhoanNganHang.id?"selected":""}>${n.ma}</option>
             </c:forEach>
         </select>
     </p>
